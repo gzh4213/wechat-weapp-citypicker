@@ -1,0 +1,112 @@
+/* addressList.wxss */
+@import '../../weui/weui.wxss';
+page {
+  height: 100%;
+}
+
+.address-list-view {
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+}
+
+.scroll-view {
+  height: 100%;
+}
+
+.addressList-item-view {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 36rpx 20rpx;
+  position: relative;
+  /*filter: blur(6rpx);*/
+}
+
+.addressList-item-view:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.left-view {
+  width: 150rpx;
+}
+
+.left-view .name {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.middle-view {
+  flex: 3;
+  margin: 0 20rpx;
+}
+
+.middle-view .Phone {
+  font-size: 28rpx;
+}
+
+.middle-view .Detail {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.defaultText {
+  width: 50rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  color: #da322a;
+  border: 2rpx solid #da322a;
+  font-size: 20rpx;
+}
+
+.delImg {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.bottom-view {
+  width: 100%;
+  height: 100rpx;
+}
+
+.add-address-view {
+  display: flex;
+  background: #f23030;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.address-add-view {
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.new-address-text {
+  color: #fff;
+  font-size: 32rpx;
+}
+

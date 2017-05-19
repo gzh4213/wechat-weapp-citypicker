@@ -1,0 +1,19 @@
+<!--addressList.wxml-->
+<view class="address-list-view">
+    <block wx:for="{{addressList}}" wx:key="id">
+      <view class="addressList-item-view" data-addressData="{{item}}" bindtap="pushToEdit">
+          <view class="left-view flex">
+              <text class="name">{{item.name}}</text>
+              <text wx:if="{{item.isdefault == 1}}" class="defaultText">默认</text>
+          </view>
+          <view class="middle-view flex">
+              <text id="{{index}}" class="Phone">{{item.buyerPhone}}</text>
+              <text id="{{index}}" class="Detail">{{item.addressdDetail}}</text>
+          </view>
+      </view>
+    </block>
+    <view class="bottom-view"></view>
+    <view class="add-address-view" bindtap="bindAddressAdd">
+      <text class="new-address-text">添加新地址</text>
+    </view>
+</view>

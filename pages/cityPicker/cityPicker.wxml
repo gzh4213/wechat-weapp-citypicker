@@ -1,0 +1,63 @@
+<!--cityPicker.wxml-->
+<view class="address-add-view">
+    <view class="item-view">
+        <text>收件人</text>
+        <input placeholder="收件人姓名" value="{{buyer_name}}" placeholder-class="placeholderStyle" bindblur="bindNameInput"/>
+    </view>
+    <view class="line-view"></view>
+    <view class="item-view">
+        <text>手机号码</text>
+        <input type="number" placeholder="收件人电话" value="{{buyer_phone}}" maxlength="11" placeholder-class="placeholderStyle" bindblur="bindPhoneNumInput"/>
+    </view>
+    <view class="line-view"></view>
+    <view class="item-view" bindtap="openPickerView">
+        <text>所在地区</text>
+        <text wx:if="{{!addressName}}" class="choose-area">请选择</text>
+        <text wx:if="{{addressName}}" class="address-text">{{addressName}}</text>
+        <image class="jump-img" src="http://shopcdn.xxbmm.com/resource/img/my_icon1.png" />
+    </view>
+    <view class="line-view"></view>
+    <view class="item-view">
+        <text>详细地址</text>
+        <input placeholder="收件人地址" value="{{detail_address}}" maxlength="10" placeholder-class="placeholderStyle" bindblur="bindDetailAddress"/>
+    </view>
+    <view class="line-view"></view>
+    <view class="default-view">
+        <!--<image src="{{isdefault?defImgSelect:defImg}}" style="width:40rpx;height:40rpx;margin-right:10rpx" bindtap="bindDefAddress"/>-->
+        <icon type="{{isdefault?'success':'circle'}}" size="23" bindtap="bindDefAddress"></icon>
+        <text>设为默认地址</text>
+    </view>
+    <view class="line-view"></view>
+    
+
+
+
+    <view class="bottom-button">
+        <text class="cancel" bindtap="bindCancelButton">取消</text>
+        <text class="save" bindtap="bindSaveButton">保存</text>
+    </view>
+
+    <!--省市区三级联动-->
+    <view wx:if="{{showPickerView}}" class="picker-view-container">
+        <view class="picker-view-title">
+           <text style="margin-left:10rpx" bindtap="closePickerView">取消</text>
+           <text>选择地址</text>
+           <text style="margin-right:10rpx" bindtap="confirmPickerView">确定</text>
+        </view>
+        <picker-view class="area-picker-view" indicator-class="area-indicator-class" value="{{value}}" bindchange="bindChange">
+            <picker-view-column>
+                <view wx:for="{{provArr}}" wx:key="id" class="picker-view-column" >{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{cityArr}}" wx:key="id" class="picker-view-column" >{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{areaArr}}" wx:key="id" class="picker-view-column" >{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+
+
+
+    
+</view>

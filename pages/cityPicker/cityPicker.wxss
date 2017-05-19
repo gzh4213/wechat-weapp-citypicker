@@ -1,0 +1,130 @@
+/* cityPicker.wxss */
+@import '../../weui/weui.wxss';
+.item-view{
+    display: flex;
+    align-items: center;
+    margin: 0rpx 16rpx;
+    position: relative;
+}
+
+.item-view text {
+    font-size: 32rpx;
+    color: #333333;
+    width: 20%;
+    margin: 36rpx 0rpx;
+}
+
+.item-view input, .item-view .choose-area {
+    margin-left: 20rpx;
+    font-size: 28rpx;
+}
+
+.item-view .address-text {
+    font-size: 28rpx;
+    color: #333333;
+    margin-left: 20rpx;
+    flex: 1;
+    margin-right: 40rpx;
+    line-height: 35rpx;
+}
+
+.item-view .jump-img {
+  width: 30rpx;
+  height: 30rpx;
+  position:absolute;
+  top:0;
+  bottom:0;
+  margin:auto;
+  right:0;
+}
+
+
+.item-view .placeholderStyle,.item-view .choose-area{
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.line-view {
+    width: 100%;
+    height: 2rpx;
+    background: #ddd;
+}
+
+.default-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-view text{
+    font-size: 32rpx;
+    color: #333333;
+    margin: 36rpx 0rpx 36rpx 10rpx;
+}
+
+.bottom-button {
+    display: flex;
+    width: 100%;
+    height: 100rpx;
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom-button text {
+    width: 50%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 32rpx;
+}
+
+.bottom-button .cancel {
+    color: #ddd;
+    background: #999999;
+}
+
+.bottom-button .save {
+    color: #ddd;
+    background: #f23030;
+}
+
+/*省市区picker-view样式*/
+.picker-view-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    background: #ffffff;
+}
+
+.picker-view-title {
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    background: mediumseagreen;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.picker-view-title text {
+    font-size: 32rpx;
+    color: #ffffff;
+}
+
+.area-picker-view {
+    width: 100%; 
+    height: 400rpx;
+    font-size: 32rpx;
+    color: #333333;
+    background: lightpink;
+}
+
+.area-indicator-class {
+    height: 100rpx;
+}
+
+.picker-view-column {
+    line-height: 100rpx;
+    text-align: center;
+}
