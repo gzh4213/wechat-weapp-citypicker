@@ -28,6 +28,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: options.navbartitle,
+    });
+  
     // options.type == 0     从添加新地址按钮进入
     // options.type == 1     点击地址列表item进入
     let that = this;

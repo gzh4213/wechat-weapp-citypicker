@@ -63,14 +63,14 @@ Page({
   pushToEdit(event) {
     let addressData = JSON.stringify(event.currentTarget.dataset.addressdata);
     wx.navigateTo({
-      url: '../cityPicker/cityPicker?type=1&addressData=' + addressData,
+      url: '../cityPicker/cityPicker?type=1&addressData=' + addressData+'&navbartitle=修改地址',
     })
   },
 
   //底部‘添加新地址’按钮方法
   bindAddressAdd() {
     wx.navigateTo({
-      url: '../cityPicker/cityPicker?type=0',
+      url: '../cityPicker/cityPicker?type=0&navbartitle=添加新地址',
     })
   },
 })
